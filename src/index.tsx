@@ -1,14 +1,11 @@
 import { createRoot } from 'react-dom/client'
-import './style.css'
-import styleScss from './style.module.scss'
-
-export const App = () => {
-  return (
-    <div className={styleScss['bg-green']}>
-      <div className={'.bg-purple'}>lol</div>
-    </div>
-  )
-}
+import { App } from './App'
+import './styles/index.scss'
+import { ThemeProvider } from './theme'
 
 const root = createRoot(document.getElementById('root'))
-root.render(<App />)
+root.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+)
