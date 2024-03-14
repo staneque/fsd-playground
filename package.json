@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "start": "webpack serve --config ./config/build/webpack.dev.ts --env PORT=9000",
+    "build": "webpack --config ./config/build/webpack.prod.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +19,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3",
+    "webpack-merge": "^5.10.0"
   }
 }
