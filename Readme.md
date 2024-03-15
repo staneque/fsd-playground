@@ -9,5 +9,3 @@ https://feature-sliced.design/
 Layout?
 
 https://feature-sliced.design/docs/guides/examples/page-layout
-
-At the moment, it seems to me that as a layer, it possesses provider-like properties.
