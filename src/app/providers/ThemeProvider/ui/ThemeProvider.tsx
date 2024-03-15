@@ -1,18 +1,5 @@
-import { ReactNode, createContext, useContext, useState } from 'react'
-
-export enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark',
-}
-
-interface ThemeProps {
-  name?: Theme
-  setTheme?: (theme: Theme) => void
-}
-
-export const THEME_KEY = 'theme'
-
-export const ThemeContext = createContext<ThemeProps>({})
+import { ReactNode, useContext, useState } from 'react'
+import { THEME_KEY, Theme, ThemeContext } from '../lib/ThemeContexts'
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
