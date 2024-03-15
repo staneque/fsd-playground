@@ -12,20 +12,3 @@ export const routesPath: Record<AppRoutes, string> = {
   [AppRoutes.Main]: '/',
   [AppRoutes.About]: '/about',
 }
-
-export const routesConfig: RouteObject[] = [
-  {
-    path: routesPath.Main,
-    element: <MainLayout />,
-    children: [
-      {
-        path: routesPath.About,
-        element: <AboutAsync />,
-      },
-      {
-        path: routesPath.Main,
-        element: <MainAsync />,
-      },
-    ],
-  },
-]
