@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
 import cn from 'classnames'
+import { ThemeToggle } from 'features/ThemeToogle'
 import styles from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -9,8 +10,9 @@ interface NavbarProps {
 export const Navbar = ({ className = '' }) => {
   return (
     <div className={cn(className, styles.navbar)}>
-      <Link to="/about">About</Link>
-      <Link to="/">Main</Link>
+      <ThemeToggle />
+      <AppLink to="/about">About</AppLink>
+      <AppLink to="/">Main</AppLink>
     </div>
   )
 }

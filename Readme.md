@@ -9,3 +9,7 @@ https://feature-sliced.design/
 Layout?
 
 https://feature-sliced.design/docs/guides/examples/page-layout
+
+Widget can't import another widget - it breaks the layer
+
+Feature (Theme toogle) needs to import Theme from upper layer Provider which breaks the rule of layer import.

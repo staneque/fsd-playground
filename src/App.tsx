@@ -8,12 +8,6 @@ export const App = () => {
 
   return (
     <div className={cn('app', name === 'dark' ? Theme.DARK : Theme.LIGHT)}>
-      <input
-        type="checkbox"
-        onChange={switchTheme}
-        checked={name === Theme.DARK}
-      />
-
       <AppRouter />
     </div>
   )
