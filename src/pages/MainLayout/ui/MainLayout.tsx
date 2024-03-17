@@ -1,12 +1,20 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Navbar } from 'widgets/navbar'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+import styles from './MainLayout.module.scss'
 
 export const MainLayout = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Outlet />
-    </div>
+
+      <main className={styles.main}>
+        <Sidebar />
+        <div className={styles.content}>
+          <Outlet />
+        </div>
+      </main>
+    </>
   )
 }

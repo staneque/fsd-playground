@@ -1,19 +1,22 @@
 import { useTheme, Theme } from 'app/providers/ThemeProvider'
 import SunIcon from 'shared/assets/icons/sun-moon-eclipse-svgrepo-com.svg'
+import cn from 'classnames'
 import styles from './ThemeToggle.module.scss'
 
-interface ThemeToggleProps {}
+interface ThemeToggleProps {
+  className: string
+}
 
-export const ThemeToggle = (props: ThemeToggleProps) => {
+export const ThemeToggle = ({ className = '' }) => {
   const { name, switchTheme } = useTheme()
 
   return (
-    <div>
-      <label htmlFor="theme-toggle" className={styles.sunIcon}>
+    <div className={cn(styles.container, className)}>
+      <label htmlFor="theme-toggle" className={styles.icon}>
         <SunIcon
           width="32px"
           height="32px"
-          fill={name === 'light' ? '#000' : '#fff'}
+          fill={name === 'light' ? '#8016f1' : '#fff'}
         />
       </label>
       <input

@@ -6,10 +6,12 @@ https://feature-sliced.design/
 
 ## Problems log
 
-Layout?
+Layout - where does it belong to
 
 https://feature-sliced.design/docs/guides/examples/page-layout
 
-Widget can't import another widget - it breaks the layer
+Feature (Theme toogle) needs to import Theme which at the first glance belongs to a higher order layer (or is it actually also a feature? ) Anyway this breaks the rule of layer import.
+Same shit with useTheme hook, which can be used by other lower level entities, so do those in fact belong to shared layer?
 
-Feature (Theme toogle) needs to import Theme from upper layer Provider which breaks the rule of layer import.
+it seems this problem is still being discussed by the framework authors
+https://www.youtube.com/watch?v=b_nBvHWqxP8&t=133s&ab_channel=Feature-SlicedDesign

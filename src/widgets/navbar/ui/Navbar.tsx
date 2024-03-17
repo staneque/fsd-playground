@@ -10,9 +10,17 @@ interface NavbarProps {
 export const Navbar = ({ className = '' }) => {
   return (
     <div className={cn(className, styles.navbar)}>
-      <ThemeToggle />
-      <AppLink to="/about">About</AppLink>
-      <AppLink to="/">Main</AppLink>
+      <div></div>
+      <div className={styles.links}>
+        <AppLink to="/" className={styles.link}>
+          Main
+        </AppLink>
+        <AppLink to="/about" className={styles.link}>
+          About
+        </AppLink>
+      </div>
+
+      <ThemeToggle className={styles.themeToggle} />
     </div>
   )
 }

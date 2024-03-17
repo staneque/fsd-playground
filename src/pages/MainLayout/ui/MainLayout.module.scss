@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  height: calc(100% - var(--navbar-height));
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+}
