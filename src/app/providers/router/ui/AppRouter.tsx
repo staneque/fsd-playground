@@ -6,7 +6,7 @@ import {
   RouteObject,
   RouterProvider,
 } from 'react-router-dom'
-import { routesPath } from 'shared/config/routeConfig/routeConfig'
+import { routesPath } from 'shared/config/routeConfig'
 
 export const routes: RouteObject[] = [
   {

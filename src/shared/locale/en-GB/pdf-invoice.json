@@ -1,0 +1,5 @@
+{
+  "pdf-cn-date": "Credit Note Date",
+  "pdf-cn-number": "Credit Note No.",
+  "pdf-invoice-b2b-payment-deadline": "Please transfer the full amount to the account provided below within 14 days of receiving the order and use the invoice number as the payment reference {invoice.no} when making the transfer.\n\nAccount Name: JUNIQE GmbH\nIBAN : DE77 1002 0890 0026 6574 74\nBIC : HYVEDEMM488\nBank : UniCredit Bank - Hypovereinsbank"
+}

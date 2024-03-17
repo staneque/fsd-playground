@@ -1,0 +1,19 @@
+{
+  "emarsys-ac1-utm": "utm_source=email&utm_medium=email_transactional&utm_campaign=ch_fr:abandonment:ret:42022_ac1&hashed=$pers_6741$",
+  "emarsys-feedback-body": "Nous attachons beaucoup d'importance à votre avis, car il nous permet de continuer à améliorer nos services. Nous vous invitons donc à prendre quelques instants pour évaluer votre expérience avec nous sur Trustpilot. Pour cela, il vous suffit d'utiliser le lien ci-dessous.\n\nVous avez des questions ou vous n'êtes pas satisfait·e·s de votre commande ? Nos héros du service clients sont à votre disposition du lundi au vendredi. Contactez-nous via <u>service@juniqe.com</u> et l'équipe vous répondra dans les deux jours ouvrés.\n\n\nMerci beaucoup !",
+  "emarsys-feedback-cta": "https://de.trustpilot.com/evaluate/juniqe.com",
+  "emarsys-feedback-cta-copy": "ÉVALUEZ-NOUS ICI",
+  "emarsys-feedback-headline": "Merci pour votre récente commande !",
+  "emarsys-feedback-pl": "Votre avis compte pour nous |",
+  "emarsys-feedback-sl": "Pourrions-nous avoir 5 minutes de votre temps ? ❤️",
+  "emarsys-footer-support-link": "https://support.juniqe.com/hc/fr-ch",
+  "emarsys-oc-dgc-link": "Cliquez ici pour télécharger vos cartes cadeaux",
+  "emarsys-oc-utm": "utm_source=email&utm_medium=email_transactional&utm_campaign=ch_fr:transactional:bra:52021_order-confirmation&hashed=",
+  "emarsys-payment-failed-utm": "utm_source=email&utm_medium=email_transactional&utm_campaign=ch_fr:transactional:bra:42022_payment-failed&hashed=",
+  "emarsys-pd-returns-body-1": "Un problème avec les articles livrés ?",
+  "emarsys-pd-returns-cta-link": "https://fr.juniqe.ch/returns",
+  "emarsys-pdd-utm": "utm_source=email&utm_medium=email_transactional&utm_campaign=ch_fr:transactional:bra:72022_parcel-delayed&hashed=",
+  "emarsys-pf1-headline-1": "Mise à jour importante concernant votre commande",
+  "emarsys-reason-order": "Vous recevez ce mail car vous avez acheté un de nos articles sur fr.juniqe.ch. Consultez les termes et conditions en rigueur au moment de votre commande.",
+  "emarsys-trustpilot-link": "https://de.trustpilot.com/evaluate/www.juniqe.ch"
+}

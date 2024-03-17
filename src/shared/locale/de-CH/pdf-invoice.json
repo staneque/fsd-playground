@@ -1,0 +1,7 @@
+{
+  "pdf-cn": "Gutschrift",
+  "pdf-cn-date": "Datum der Gutschrift",
+  "pdf-cn-number": "Nummer der Gutschrift",
+  "pdf-inv-juniqe-directors": "Managing Director:\nRené Ruhland",
+  "pdf-invoice-b2b-payment-deadline": "Bitte überweisen Sie den Gesamtbetrag innerhalb von 14 Tagen nach Erhalt der Bestellung auf das unten angegebene Konto und geben Sie bei der Überweisung die Rechnungsnummer als Zahlungsreferenz {invoice.no} an.\n\nInhaber: JUNIQE GmbH\nIBAN : DE77 1002 0890 0026 6574 74\nBIC : HYVEDEMM488\nBank : UniCredit Bank - Hypovereinsbank"
+}

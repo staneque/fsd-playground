@@ -1,0 +1,6 @@
+{
+  "pdf-cn": "Avoir",
+  "pdf-cn-date": "Date de l'avoir",
+  "pdf-cn-number": "Numéro de l'avoir",
+  "pdf-invoice-b2b-payment-deadline": "Veuillez s'il vous plaît transférer le montant total sur le compte ci-dessous dans les 14 jours suivant la réception de votre commande et utiliser le numéro de facture {invoice.no} comme référence de paiement lors de la transaction.\n\nNom du compte : JUNIQE GmbH\nIBAN : DE77 1002 0890 0026 6574 74\nBIC : HYVEDEMM488\nBanque : UniCredit Bank - Hypovereinsbank"
+}
