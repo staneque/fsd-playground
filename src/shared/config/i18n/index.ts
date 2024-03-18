@@ -4,13 +4,14 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-locize-backend'
 import { DateTime } from 'luxon'
 
+// const isDev = process.env.NODE_ENV === 'development'
+const isDev = false
+
 const locizeOptions = {
   projectId: process.env.LOCIZE_ID,
-  apiKey: process.env.LOCIZE_API_KEY, // Do not do this client side in prod
+  // Only to save new keys in dev, do not include the API key in production build
+  apiKey: isDev && process.env.LOCIZE_API_KEY,
   referenceLng: 'en',
-  // ns: ['pdp'],
-  // fallbackNS: ['pdp'],
-  // defaultNS: 'pdp',
 }
 
 i18n
@@ -38,7 +39,7 @@ i18n
       // }
     },
     backend: locizeOptions,
-    saveMissing: false,
+    saveMissing: false, //
   })
 
 // new usage
