@@ -19,7 +19,7 @@ export const Sidebar = (props: SidebarProps) => {
         {isCollapsed ? '🗃️' : '🙅🏼‍♀️'}
       </button>
 
-      <ul>
+      <ul className={cn(styles.sidebarItems)}>
         <li>{t('pdp-product-quality')}</li>
       </ul>
     </div>
