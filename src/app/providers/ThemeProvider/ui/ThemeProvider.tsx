@@ -1,9 +1,7 @@
 import { ReactNode, useContext, useState } from 'react'
 import { THEME_KEY, Theme, ThemeContext } from '../lib/ThemeContexts'
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(
     (localStorage.getItem(THEME_KEY) as Theme) || Theme.LIGHT
   )

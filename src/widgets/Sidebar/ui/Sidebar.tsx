@@ -3,9 +3,7 @@ import styles from './Sidebar.module.scss'
 import { cn } from 'shared/libs/classNames'
 import { useTranslation } from 'react-i18next'
 
-interface SidebarProps {}
-
-export const Sidebar = (props: SidebarProps) => {
+export const Sidebar = () => {
   const { t } = useTranslation('pdp')
 
   const [isCollapsed, setCollapsed] = useState(false)

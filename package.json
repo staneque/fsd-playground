@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --config ./config/build/webpack.dev.ts --env PORT=9000 --node-env development",
     "build": "webpack --config ./config/build/webpack.prod.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix src/**/*.{ts,tsx}"
   },
   "author": "",
   "license": "ISC",
@@ -19,8 +20,12 @@
     "@types/react-dom": "^18.2.22",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.3.0",
+    "@typescript-eslint/parser": "^7.3.0",
     "css-loader": "^6.10.0",
     "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.8.1",

@@ -43,7 +43,7 @@ i18n
   })
 
 // new usage
-i18n.services.formatter.add('DATE_HUGE', (value, lng, options) => {
+i18n.services.formatter.add('DATE_HUGE', (value, lng) => {
   return DateTime.fromJSDate(value)
     .setLocale(lng)
     .toLocaleString(DateTime.DATE_HUGE)

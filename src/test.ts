@@ -1,3 +1,3 @@
-export const func = (n: number): string => {
+export const func = (): string => {
   return ''
 }
