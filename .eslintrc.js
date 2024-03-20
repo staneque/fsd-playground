@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   settings: {
     react: {
@@ -30,6 +31,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
-  rules: {},
+  plugins: ['@typescript-eslint', 'react', 'i18next'],
+  rules: {
+    'i18next/no-literal-string': 2,
+    npx,
+  },
 }
