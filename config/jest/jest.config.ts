@@ -74,9 +74,10 @@ const config: Config = {
 
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: ['node_modules'],
-
-  modulePaths: ['<rootDir>src'],
-
+  // An alternative API to setting the NODE_PATH env variable,
+  // modulePaths is an array of absolute paths to additional locations
+  // to search when resolving modules. Use the <rootDir> string token to include the path to your project's root directory.
+  modulePaths: ['<rootDir>/src'],
   // An array of file extensions your modules use
   moduleFileExtensions: [
     'js',
@@ -93,7 +94,7 @@ const config: Config = {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.ts',
-    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.ts',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -192,6 +193,7 @@ const config: Config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 }
 
 export default config
