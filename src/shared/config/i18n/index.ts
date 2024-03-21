@@ -4,8 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-locize-backend'
 import { DateTime } from 'luxon'
 
-// const isDev = process.env.NODE_ENV === 'development'
-const isDev = false
+const isDev = process.env.NODE_ENV === 'development'
 
 const locizeOptions = {
   projectId: process.env.LOCIZE_ID,
@@ -39,7 +38,7 @@ i18n
       // }
     },
     backend: locizeOptions,
-    saveMissing: false, //
+    saveMissing: false,
   })
 
 // new usage
