@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './Sidebar.module.scss'
-import { cn } from 'shared/libs/classNames'
+import { classNames as cn } from 'shared/libs/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 
 export const Sidebar = () => {
