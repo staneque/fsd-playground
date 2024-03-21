@@ -1,14 +1,26 @@
-import React from 'react'
+import {
+  useRouteError,
+  ErrorResponse,
+  isRouteErrorResponse,
+} from 'react-router-dom'
 import styles from './Error.module.scss'
 
 interface ErrorPageProps {}
 
 export const ErrorPage = (props: ErrorPageProps) => {
+  const error = useRouteError() as ErrorResponse
+
   return (
     <div className={styles.error}>
       <div className={styles.descrContainer}>
-        <p className={styles.code}>404</p>
-        <p className={styles.descr}>Page not found</p>
+        {isRouteErrorResponse(error) ? (
+          <>
+            <p className={styles.code}>{error.status}</p>
+            <p className={styles.descr}>{error.statusText}</p>
+          </>
+        ) : (
+          <p>Something went wrong</p>
+        )}
       </div>
     </div>
   )
