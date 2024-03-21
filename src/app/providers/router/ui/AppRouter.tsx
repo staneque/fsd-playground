@@ -1,4 +1,5 @@
 import { AboutAsync } from 'pages/About'
+import { ErrorPage } from 'pages/Error'
 import { MainAsync } from 'pages/Main'
 import { MainLayout } from 'pages/MainLayout'
 import {
@@ -12,6 +13,7 @@ export const routes: RouteObject[] = [
   {
     path: routesPath.Main,
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: routesPath.About,
