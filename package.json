@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "^21.6.1",
+    "npm": "^10.2.4"
+  },
   "scripts": {
     "start": "webpack serve --config ./config/build/webpack.dev.ts --env PORT=9000 --node-env development",
     "build": "webpack --config ./config/build/webpack.prod.ts",

@@ -14,6 +14,7 @@ export const Sidebar = () => {
       className={cn(styles.sidebar, isCollapsed && styles.sidebarCollapsed)}
     >
       <button
+        data-testid="sidebar-toggle"
         onClick={() => setCollapsed(isCollapsed => !isCollapsed)}
         className={styles.toggleSidebar}
       >
