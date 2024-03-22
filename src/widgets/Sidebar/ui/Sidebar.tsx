@@ -9,7 +9,10 @@ export const Sidebar = () => {
   const [isCollapsed, setCollapsed] = useState(false)
 
   return (
-    <div className={cn(styles.sidebar, isCollapsed && styles.sidebarCollapsed)}>
+    <div
+      data-testid="sidebar"
+      className={cn(styles.sidebar, isCollapsed && styles.sidebarCollapsed)}
+    >
       <button
         onClick={() => setCollapsed(isCollapsed => !isCollapsed)}
         className={styles.toggleSidebar}
@@ -19,6 +22,9 @@ export const Sidebar = () => {
 
       <ul className={cn(styles.sidebarItems)}>
         <li>{t('pdp-product-quality')}</li>
+        <li>{t('pdp-product-size')}</li>
+        <li>{t('pdp-step-custom')}</li>
+        <li>{t('pdp-step-design')}</li>
       </ul>
     </div>
   )

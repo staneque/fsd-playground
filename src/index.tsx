@@ -6,7 +6,8 @@ import 'shared/config/i18n'
 
 console.log('🚀 ~ r:', process.env.NODE_ENV)
 
-const root = createRoot(document.getElementById('root'))
+const root = createRoot(document.getElementById('root') as HTMLElement)
+
 root.render(
   <ThemeProvider>
     <App />
