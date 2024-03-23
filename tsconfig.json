@@ -21,5 +21,11 @@
       "module": "commonjs"
     }
   },
-  "include": ["src/**/*", "config/**/*", "./global.ds.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "config/**/*.ts",
+    "config/**/*.tsx",
+    "./global.ds.ts"
+  ]
 }
