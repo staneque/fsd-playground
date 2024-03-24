@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import { App } from './App'
-import './styles/index.scss'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
+import './app/styles/index.scss'
 import 'shared/config/i18n'
 
 console.log('🚀 ~ r:', process.env.NODE_ENV)

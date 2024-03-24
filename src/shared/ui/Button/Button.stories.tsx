@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { Button } from './Button'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
+import { Theme } from 'app/providers/ThemeProvider'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -21,13 +23,16 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const LightTheme: Story = {
+  decorators: [ThemeDecorator(Theme.LIGHT)],
   args: {
     children: 'Text',
   },
 }
 
-export const Secondary: Story = {
+export const DarkTheme: Story = {
+  decorators: [ThemeDecorator(Theme.DARK)],
+
   args: {
     children: 'Text',
   },

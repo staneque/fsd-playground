@@ -1,4 +1,13 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
+import { styleLoaders } from '../build/styleLoaders'
+import path from 'path'
+
+const { scss } = styleLoaders(true)
+const svg = {
+  test: /\.svg$/i,
+  issuer: /\.[jt]sx?$/,
+  use: ['@svgr/webpack'],
+}
 
 const config: StorybookConfig = {
   stories: [
@@ -20,5 +29,23 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  webpackFinal: async config => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [...(config.module?.rules || []), scss, svg],
+      },
+      resolve: {
+        ...config.resolve,
+        modules: [
+          ...(config.resolve?.modules || []),
+          path.resolve(__dirname, '..', '..', 'src'),
+        ],
+        extensions: [...(config.resolve?.extensions || []), '.ts', '.tsx'],
+      },
+    }
+  },
 }
+
 export default config
