@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
 import { styleLoaders } from '../buildConfig/styleLoaders'
 import path from 'path'
-import webpack, { RuleSetRule } from 'webpack'
+import { RuleSetRule } from 'webpack'
 
 const { scss } = styleLoaders(true)
 const svg = {
@@ -32,13 +32,11 @@ const config: StorybookConfig = {
   },
   webpackFinal: async config => {
     // Override any existing SVG loader
-    const fileLoaderRule = config.module?.rules?.find(
-      (rule: webpack.RuleSetRule) => {
-        if (rule.test instanceof RegExp) {
-          return rule.test.test('.svg')
-        }
+    const fileLoaderRule = config.module?.rules?.find((rule: RuleSetRule) => {
+      if (rule.test instanceof RegExp) {
+        return rule.test.test('.svg')
       }
-    ) as webpack.RuleSetRule
+    }) as RuleSetRule
 
     fileLoaderRule.exclude = /\.svg$/
 
