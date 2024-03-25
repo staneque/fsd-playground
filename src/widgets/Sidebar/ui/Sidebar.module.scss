@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
   width: var(--sidebar-width);
   flex-shrink: 0;
   background-color: var(--bg-color-dark);
@@ -23,6 +23,18 @@
   }
 }
 
+.toggleSidebar {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .sidebarCollapsed {
   width: var(--sidebar-width-collapsed);
 
@@ -32,13 +44,9 @@
     transform: translateX(-200px);
     transition: all 0.2s ease-in-out;
   }
-}
 
-.toggleSidebar {
-  position: absolute;
-  top: 10px;
-  right: 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
+  .toggleSidebar {
+    transform: translateX(50%);
+    right: calc(var(--sidebar-width-collapsed) / 2);
+  }
 }
