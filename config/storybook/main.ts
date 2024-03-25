@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
-import { styleLoaders } from '../build/styleLoaders'
+import { styleLoaders } from '../buildConfig/styleLoaders'
 import path from 'path'
 import webpack, { RuleSetRule } from 'webpack'
 
