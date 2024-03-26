@@ -4,3 +4,4 @@ dist
 .env
 .metals
 *storybook.log
+storybook-static

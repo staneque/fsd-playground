@@ -22,7 +22,7 @@ export const classNames = (...args: cnArg[]) => {
 
       result += classes ? ' ' + classes : ''
     } else if (Array.isArray(arg)) {
-      const classes = arg.filter(arg => Boolean).join(' ')
+      const classes = arg.filter(() => Boolean).join(' ')
 
       result += classes ? ' ' + classes : ''
     } else {

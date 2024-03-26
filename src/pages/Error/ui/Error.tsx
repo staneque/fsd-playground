@@ -5,9 +5,7 @@ import {
 } from 'react-router-dom'
 import styles from './Error.module.scss'
 
-interface ErrorPageProps {}
-
-export const ErrorPage = (props: ErrorPageProps) => {
+export const ErrorPage = () => {
   const error = useRouteError() as ErrorResponse
 
   return (

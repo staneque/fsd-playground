@@ -17,7 +17,6 @@ describe('Sidebar', () => {
     render(<SidebarWithTranslation />)
 
     const toggle = screen.getByTestId('sidebar-toggle')
-    screen.debug()
 
     fireEvent.click(toggle)
     expect(screen.getByTestId('sidebar')).toHaveClass('sidebarCollapsed')
