@@ -43,6 +43,7 @@ jobs:
 
   Visual:
     name: Visual regression
+    needs: Unit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
