@@ -11,9 +11,10 @@
     "start": "webpack serve --config ./config/buildConfig/webpack.dev.ts --env PORT=9000 --node-env development",
     "build": "webpack --config ./config/build/webpack.prod.ts",
     "test": "jest --config ./config/jest/jest.config.ts --watch",
-    "lint": "eslint --fix src/**/*.{ts,tsx}",
+    "lint": "npx eslint --fix src/**/*.{ts,tsx}",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "pixel-update": "npx lost-pixel docker update"
   },
   "author": "",
   "license": "ISC",

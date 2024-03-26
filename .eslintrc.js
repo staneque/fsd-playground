@@ -9,7 +9,13 @@ module.exports = {
       version: 'detect',
     },
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:storybook/recommended',
+  ],
   overrides: [
     {
       env: {
@@ -28,7 +34,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'i18next'],
   rules: {
-    'i18next/no-literal-string': 2,
-    npx,
+    'i18next/no-literal-string': 0,
+    'react/display-name': 0,
   },
 }
