@@ -16,7 +16,7 @@
     "lint": "npx eslint src/**/*.{ts,tsx}",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "pixel-update": "npx lost-pixel docker update"
+    "pxl-upd": "npx lost-pixel docker update"
   },
   "author": "",
   "license": "ISC",
