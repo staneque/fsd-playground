@@ -32,9 +32,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'i18next'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'i18next'],
   rules: {
     'i18next/no-literal-string': 0,
     'react/display-name': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 }

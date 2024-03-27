@@ -37,3 +37,14 @@ export const DarkTheme: Story = {
     children: 'Text',
   },
 }
+
+export const Stretch: Story = {
+  decorators: [ThemeDecorator(Theme.DARK)],
+  parameters: {
+    layout: 'fullscreen',
+  },
+  args: {
+    children: 'Text',
+    stretch: true,
+  },
+}
