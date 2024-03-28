@@ -7,13 +7,11 @@ export const Main = () => {
   const [isModalOpen, setModalOpen] = useState(false)
 
   const handleModaleClose = () => {
-    console.log('🚀 ~ handleModaleClose ~ l:', 'close')
-
     setModalOpen(false)
   }
 
   const handleEscape = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
+    if (e.code === 'Escape') {
       handleModaleClose()
     }
   }
