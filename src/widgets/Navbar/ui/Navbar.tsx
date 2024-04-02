@@ -10,7 +10,6 @@ interface NavbarProps {
 export const Navbar = ({ className = '' }: NavbarProps) => {
   return (
     <div className={cn(className, styles.navbar)}>
-      <div></div>
       <div className={styles.links}>
         <AppLink to="/" className={styles.link}>
           Main

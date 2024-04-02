@@ -1,12 +1,22 @@
 import { useState } from 'react'
 import styles from './Sidebar.module.scss'
 import { classNames as cn } from 'shared/libs/classNames/classNames'
-import { useTranslation } from 'react-i18next'
+import { usePoke } from 'entities/Pokemon/libs/usePoke'
+// import { Button } from 'shared/ui/Button'
 
-export const Sidebar = () => {
-  const { t } = useTranslation('pdp')
+interface SidebarProps {
+  onItemClick: (name: string) => void
+}
 
+export const Sidebar = ({ onItemClick }: SidebarProps) => {
   const [isCollapsed, setCollapsed] = useState(false)
+  // const [pokeName, setPokeName] = useState('')
+  const poke = usePoke('')
+  console.log('🚀 ~ Sidebar ~ poke:', poke)
+
+  const handleItemClick = (name: string) => {
+    onItemClick(name)
+  }
 
   return (
     <div
@@ -21,11 +31,24 @@ export const Sidebar = () => {
         {isCollapsed ? '🗃️' : '🙅🏼‍♀️'}
       </button>
 
+      {poke.isError && <div>error</div>}
+      {poke.isLoading && <div>Loading...</div>}
+
+      {/* <Button onClick={() => poke.refetch()}>refetch</Button> */}
+
+      {/* <input
+        onChange={e => setPokeName(e.target.value)}
+        value={pokeName}
+      ></input> */}
+
       <ul className={cn(styles.sidebarItems)}>
-        <li>{t('pdp-product-quality')}</li>
-        <li>{t('pdp-product-size')}</li>
-        <li>{t('pdp-step-custom')}</li>
-        <li>{t('pdp-step-design')}</li>
+        {poke.data?.results?.map((p: { name: string }) => {
+          return (
+            <li key={p.name} onClick={() => handleItemClick(p.name)}>
+              {p.name}
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

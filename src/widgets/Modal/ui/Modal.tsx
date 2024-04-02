@@ -4,10 +4,11 @@ import styles from './Modal.module.scss'
 
 interface ModalProps {
   isOpen: boolean
+  children: React.ReactNode
   onOverlayClick: (e: React.MouseEvent) => void
 }
 
-export const Modal = ({ isOpen, onOverlayClick }: ModalProps) => {
+export const Modal = ({ isOpen, onOverlayClick, children }: ModalProps) => {
   const handleOverlayClick = (e: React.MouseEvent) => {
     onOverlayClick(e)
   }
@@ -21,9 +22,6 @@ export const Modal = ({ isOpen, onOverlayClick }: ModalProps) => {
           exit={{ opacity: 0 }}
           className={cn(styles.modal, isOpen && styles.open)}
         >
-          {/* Overlay */}
-          <div className={styles.overlay} onClick={handleOverlayClick} />
-
           {/* Content */}
           <motion.div
             initial={{ scale: 0 }}
@@ -31,8 +29,11 @@ export const Modal = ({ isOpen, onOverlayClick }: ModalProps) => {
             exit={{ scale: 0 }}
             className={styles.content}
           >
-            hi im modal
+            {children}
           </motion.div>
+
+          {/* Overlay */}
+          <div className={styles.overlay} onClick={handleOverlayClick} />
         </motion.div>
       )}
     </AnimatePresence>
