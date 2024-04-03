@@ -38,24 +38,26 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
   return (
     <div className={cn(styles.loginForm, className)}>
-      {error && <p>Invalid email or password</p>}
-
       <Input
         autofocus
         type="text"
         className={styles.input}
-        placeholder={t('Username')}
+        placeholder={t('Bulbozaur')}
+        label="Username"
         onChange={onChangeUsername}
         value={username}
       />
 
       <Input
-        type="text"
+        type="password"
         className={styles.input}
-        placeholder={t('Password')}
+        placeholder={t('!@#$#%W!@!$%$')}
+        label="Password"
         onChange={onChangePassword}
         value={password}
       />
+
+      {error && <p>Invalid email or password</p>}
 
       <Button onClick={onLoginClick} disabled={isLoading}>
         {t('Login')}
